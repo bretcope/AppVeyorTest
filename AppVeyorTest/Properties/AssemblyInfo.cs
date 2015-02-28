@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AppVeyorTest")]
-[assembly: AssemblyDescription("This is just a testing library.")]
+[assembly: AssemblyDescription("This is just a test library.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AppVeyorTest")]
