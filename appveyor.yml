@@ -5,7 +5,7 @@
 #---------------------------------#
 
 environment:
-  NUGET_VERSION: 1.0.6
+  NUGET_VERSION: 1.0.7
   NUGET_FILE: AppVeyorTest\AppVeyorTest.nuspec
 
 version: $(nuget_version).{build}
