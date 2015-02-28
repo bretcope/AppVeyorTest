@@ -1,14 +1,13 @@
 
 # figure out the correct nuget package version (depends on whether this is a release or not)
-$version = "$env:nuget_version"
-Write-Host "APPVEYOR_REPO_TAG: $env:APPVEYOR_REPO_TAG"
+$version = "$env:NUGET_VERSION"
 if ("$env:APPVEYOR_REPO_TAG" -ne "true") # non-tagged (pre-release build)
 {
   $version += "-unstable$env:APPVEYOR_BUILD_NUMBER"
 }
 
 # grab .nuspec file contents
-$file = "$PSScriptRoot\..\AppVeyorTest\AppVeyorTest.nuspec"
+$file = "$PSScriptRoot\..\$env:NUGET_FILE"
 $contents = (Get-Content $file) | Out-String
 
 # replace NUGET_VERSION with the the actual version
