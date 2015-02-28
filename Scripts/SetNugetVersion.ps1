@@ -7,5 +7,5 @@ if ("$env:APPVEYOR_REPO_TAG" -ne "true") # non-tagged (pre-release build)
 }
 
 # set the NUGET_VERSION env variable
-[Environment]::SetEnvironmentVariable("NUGET_VERSION", "$version", "User")
+[Environment]::SetEnvironmentVariable("NUGET_VERSION", "$version", "Process")
 Write-Host "NUGET_VERSION set as $version"
