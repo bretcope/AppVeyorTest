@@ -5,13 +5,13 @@
 #---------------------------------#
 
 environment:
-  NUGET_VERSION: 1.0.4
+  NUGET_VERSION: 1.0.5
   NUGET_FILE: AppVeyorTest\AppVeyorTest.nuspec
 
 version: $(nuget_version).{build}
 
 skip_commits:
-  message: /$v\d+\.\d+\.\d+/
+  message: /^v\d+\.\d+\.\d+/
 
 #---------------------------------#
 #    environment configuration    #
