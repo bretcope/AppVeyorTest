@@ -31,7 +31,7 @@ platform: Any CPU
 configuration: Release
 
 build:
-  project: BosunReporter\BosunReporter.csproj
+  project: AppVeyorTest\AppVeyorTest.csproj
   publish_nuget: true
   publish_nuget_symbols: true
   verbosity: normal
