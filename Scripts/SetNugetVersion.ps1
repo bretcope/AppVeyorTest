@@ -1,6 +1,6 @@
 # make sure AssemblyInfo.cs has 
 $asmInfo = (Get-Content "$PSScriptRoot\..\$env:ASSEMBLY_FILE") | Out-String
-$pattern = '^\s*[\s*assembly\s*:\s*AssemblyInformationalVersion\s*\(\s*"[^"]*"\s*\)]\s*$'
+$pattern = '^\s*\[\s*assembly\s*:\s*AssemblyInformationalVersion\s*\(\s*"[^"]*"\s*\)\]\s*$'
 if (-not [Regex]::IsMatch($asmInfo, $pattern, [System.Text.RegularExpressions.RegexOptions]::Multiline))
 {
     Write-Error "AssemblyInformationalVersion was not found in $env:ASSEMBLY_FILE"
