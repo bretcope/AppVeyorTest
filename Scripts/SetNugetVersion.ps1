@@ -1,3 +1,12 @@
+# make sure AssemblyInfo.cs has 
+$asmInfo = (Get-Content $env:ASSEMBLY_FILE) | Out-String
+$pattern = '^[assembly: AssemblyInformationalVersion("[^"]*")]$'
+if (-not [Regex]::IsMatch($asmInfo, $pattern, [System.Text.RegularExpressions.RegexOptions]::Multiline))
+{
+    Write-Error "AssemblyInformationalVersion was not found in $env:ASSEMBLY_FILE"
+    Exit 1
+}
+
 # get current release version
 $version = "$env:NUGET_RELEASE_VERSION"
 
