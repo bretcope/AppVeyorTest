@@ -12,7 +12,7 @@ $version = "$env:NUGET_RELEASE_VERSION"
 
 # make sure version follows the 0.0.0 format
 $versionMatch = [Regex]::Match($version, '^(?<Major>\d+)\.(?<Minor>\d+)\.(?<Patch>\d+)$')
-if (!versionMatch.Success)
+if (!$versionMatch.Success)
 {
 	Write-Error "Invalid NUGET_RELEASE_VERSION: $version"
 	Exit 1
